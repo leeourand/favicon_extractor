@@ -1,9 +1,10 @@
+require 'pry'
 module FaviconExtractor
   class ExtractsFaviconsFromHtml
     class << self
       def extract(html, url)
         @url = url
-        html.scan(/<link.*icon.*>/).flatten.map do |str|
+        html.scan(/<link.*?icon.*?>/).flatten.map do |str|
           str.match(/href="(.*?)"/).captures.first
         end
           .map { |str| handle_relative_paths(str) }

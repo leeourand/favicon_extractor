@@ -24,6 +24,7 @@ module FaviconExtractor
       it "extracts the largest favicon" do
         expect(FaviconExtractor.extract("http://google.com")).to eq("http://google.com/favicon.ico")
         expect(FaviconExtractor.extract("http://vts.com")).to eq("https://www.vts.com/wp-content/uploads/2018/02/favicon-96x96-new.png")
+        expect(FaviconExtractor.extract("http://starbucks.com")).to eq("http://starbucks.com/next_static/icons/pwa-icon-192.png")
       end
     end
   end
