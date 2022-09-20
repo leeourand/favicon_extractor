@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    favicon_extractor (0.1.0)
+    favicon_extractor (0.1.2)
       fastimage (~> 2.2)
 
 GEM
